@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TS Blox • Contas Premium Blox Fruits</title>
+
+    <meta name="description" content="Compre contas premium de Blox Fruits level max 2800 com entrega rápida e suporte 24h.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap');
+
+        :root {
+            --neon-blue: #00f0ff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background: black;
+            color: white;
+        }
+
+        .logo-font {
+            font-family: 'Press Start 2P', sans-serif;
+        }
+
+        .hero-bg {
+            background:
+            linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.92)),
+            url('https://images.unsplash.com/photo-1616588587683-2d8c0f8c5e6f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover;
+        }
+
+        .neon-text {
+            text-shadow:
+            0 0 10px var(--neon-blue),
+            0 0 20px var(--neon-blue),
+            0 0 40px var(--neon-blue);
+        }
+
+        nav {
+            backdrop-filter: blur(14px);
+            background: rgba(0,0,0,0.75);
+        }
+
+        .card {
+            transition: .5s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 35px rgba(0,240,255,.35);
+        }
+
+        .glow-card {
+            position: relative;
+        }
+
+        .glow-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 24px;
+            background: linear-gradient(45deg,#00f0ff,#0055ff,#00f0ff);
+            z-index: -1;
+            opacity: 0;
+            transition: .4s;
+        }
+
+        .glow-card:hover::before {
+            opacity: 1;
+        }
+
+        .btn-neon {
+            position: relative;
+            overflow: hidden;
+            transition: .4s;
+        }
+
+        .btn-neon:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-neon::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 40%;
+            height: 200%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+            transform: skewX(-25deg);
+            animation: shine 4s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-150%) skewX(-25deg);
+            }
+
+            100% {
+                transform: translateX(400%) skewX(-25deg);
+            }
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(0px) translateX(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-120px) translateX(40px) rotate(180deg);
+            }
+
+            100% {
+                transform: translateY(-240px) translateX(-40px) rotate(360deg);
+            }
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: #00f0ff;
+            opacity: .6;
+            animation: floatParticle 15s linear infinite;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .card:hover .product-image {
+            transform: scale(1.08);
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeUp .8s forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<section class="hero-bg min-h-screen flex items-center relative">
+
+    <div id="particles" class="absolute inset-0"></div>
+
+    <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+
+        <div class="flex justify-center mb-8">
+            <div class="flex items-center gap-4 bg-zinc-950 border border-cyan-400 rounded-2xl px-8 py-4">
+                <i class="fa-solid fa-dragon text-5xl text-cyan-400"></i>
+
+                <div>
+                    <h1 class="logo-font text-5xl md:text-6xl neon-text">TS BLOX</h1>
+                    <p class="text-cyan-300 text-sm tracking-[4px]">PREMIUM ACCOUNTS</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-4xl md:text-7xl font-bold leading-tight mb-6">
+            AS MELHORES CONTAS<br>
+            DE <span class="text-cyan-400 neon-text">BLOX FRUITS</span>
+        </h2>
+
+        <p class="text-xl md:text-3xl text-zinc-300 mb-10">
+            Level 2800 • Frutas Permanentes • Full Gamepass
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+
+            <button onclick="navigateToShop()"
+            class="btn-neon bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-10 py-5 rounded-2xl text-xl">
+
+            ENTRAR NA LOJA
+
+            </button>
+
+            <button onclick="navigateToShop()"
+            class="border-2 border-white hover:border-cyan-400 px-10 py-5 rounded-2xl text-xl font-bold transition-all">
+
+            VER CONTAS
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<nav class="fixed top-0 left-0 right-0 border-b border-cyan-900 z-50">
+
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+        <div class="flex items-center gap-3">
+            <i class="fa-solid fa-dragon text-3xl text-cyan-400"></i>
+            <h1 class="logo-font text-2xl md:text-3xl neon-text">TS BLOX</h1>
+        </div>
+
+        <button onclick="navigateToShop()"
+        class="bg-white text-black px-6 py-3 rounded-2xl font-semibold hover:bg-cyan-300 transition-all">
+
+        Loja
+
+        </button>
+
+    </div>
+
+</nav>
+
+<section id="shop-section" class="py-24 bg-zinc-950">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold mb-4">
+                Contas <span class="text-cyan-400">Level Max</span>
+            </h2>
+
+            <p class="text-xl text-zinc-400">
+                Escolha sua próxima conta lendária
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        id="products-grid"></div>
+
+    </div>
+
+</section>
+
+<footer class="bg-black border-t border-zinc-900 py-16">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+
+        <div class="flex items-center gap-4">
+            <i class="fa-solid fa-dragon text-4xl text-cyan-400"></i>
+
+            <div>
+                <h3 class="logo-font text-3xl">TS BLOX</h3>
+                <p class="text-zinc-500">© 2026 Todos direitos reservados.</p>
+            </div>
+        </div>
+
+        <div class="flex gap-8">
+
+            <a href="https://discord.gg/De9Y3EVqR"
+            target="_blank"
+            class="hover:text-cyan-400 flex items-center gap-2 transition-all hover:scale-110">
+
+                <i class="fa-brands fa-discord text-2xl"></i>
+                <span>Discord</span>
+
+            </a>
+
+        </div>
+
+        <div>
+            <i class="fa-solid fa-qrcode text-emerald-400 text-4xl"></i>
+        </div>
+
+    </div>
+
+</footer>
+
+<div onclick="toggleChat()"
+class="fixed bottom-8 right-8 bg-cyan-500 text-black w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-2xl shadow-cyan-500/50 cursor-pointer hover:scale-110 transition-transform z-50">
+
+    <i class="fa-solid fa-comment-dots"></i>
+
+</div>
+
+<script>
+
+function createParticles() {
+
+    const container = document.getElementById('particles');
+
+    for (let i = 0; i < 60; i++) {
+
+        const particle = document.createElement('div');
+
+        particle.className = 'particle';
+
+        const size = Math.random() * 6 + 3;
+
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.animationDuration = `${Math.random() * 20 + 15}s`;
+        particle.style.animationDelay = `-${Math.random() * 20}s`;
+
+        container.appendChild(particle);
+    }
+}
+
+const products = [
+{
+    id: 1,
+    name: "Level 2800 • Kitsune + Leopard",
+    level: "2800",
+    fruits: "Kitsune, Leopard, Dough",
+    race: "Human V4",
+    price: "289.90",
+    tag: "Mais Vendida",
+    image: "https://staticg.sportskeeda.com/editor/2024/01/90f69-17066224001983-1920.jpg"
+},
+{
+    id: 2,
+    name: "PvP God • Dough Permanent",
+    level: "2750",
+    fruits: "Dough, Venom, Spider",
+    race: "Mink V4",
+    price: "199.90",
+    tag: "PvP",
+    image: "https://images5.alphacoders.com/133/1338707.jpeg"
+},
+{
+    id: 3,
+    name: "Full Gamepass + Dragon",
+    level: "2800",
+    fruits: "Dragon, Blizzard",
+    race: "Fish V4",
+    price: "229.90",
+    tag: "Gamepass",
+    image: "https://wallpapers.com/images/featured/blox-fruits-pictures-0x10vy46v0x8f7c9.jpg"
+}
+];
+
+function renderProducts() {
+
+    const grid = document.getElementById('products-grid');
+
+    grid.innerHTML = '';
+
+    products.forEach((product, index) => {
+
+        const cardHTML = `
+
+        <div class="card glow-card bg-zinc-900 border border-zinc-700 rounded-3xl overflow-hidden group fade-up"
+             style="animation-delay:${index * 0.2}s">
+
+            <div class="overflow-hidden">
+                <img src="${product.image}" class="product-image">
+            </div>
+
+            <div class="h-2 bg-gradient-to-r from-cyan-400 to-blue-600"></div>
+
+            <div class="p-6">
+
+                <span class="px-4 py-1 bg-cyan-400 text-black text-xs font-bold rounded-full">
+                    ${product.tag}
+                </span>
+
+                <h3 class="text-2xl font-bold mt-6 mb-1">
+                    ${product.name}
+                </h3>
+
+                <div class="flex items-center gap-2 text-emerald-400 mb-6">
+                    <span class="text-5xl font-bold">${product.level}</span>
+                    <span class="text-sm">LEVEL</span>
+                </div>
+
+                <div class="space-y-3 mb-8 text-sm">
+
+                    <div class="flex justify-between">
+                        <span class="text-zinc-400">Frutas:</span>
+                        <span class="font-medium">${product.fruits}</span>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <span class="text-zinc-400">Raça:</span>
+                        <span class="font-medium">${product.race}</span>
+                    </div>
+
+                </div>
+
+                <div class="flex items-end justify-between">
+
+                    <div>
+                        <span class="text-xs text-zinc-400">
+                            A PARTIR DE
+                        </span>
+
+                        <p class="text-4xl font-bold text-emerald-400">
+                            R$ ${product.price}
+                        </p>
+                    </div>
+
+                    <button onclick="buyNow(${product.id})"
+                    class="px-8 py-4 bg-white text-black font-bold rounded-2xl group-hover:bg-cyan-400 transition-all">
+
+                    COMPRAR
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>`;
+
+        grid.innerHTML += cardHTML;
+    });
+}
+
+function buyNow(id) {
+
+    const paymentLinks = {
+        1: "https://mpago.la/SEULINK1",
+        2: "https://mpago.la/SEULINK2",
+        3: "https://mpago.la/SEULINK3"
+    };
+
+    window.open(paymentLinks[id], '_blank');
+}
+
+function navigateToShop() {
+
+    const section = document.getElementById('shop-section');
+
+    window.scrollTo({
+        top: section.offsetTop - 100,
+        behavior: 'smooth'
+    });
+}
+
+function toggleChat() {
+
+    window.open(
+        'https://discord.gg/De9Y3EVqR',
+        '_blank'
+    );
+}
+
+window.onload = () => {
+
+    createParticles();
+    renderProducts();
+
+};
+
+</script>
+
+</body>
+</html>
+```
